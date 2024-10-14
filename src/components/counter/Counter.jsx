@@ -14,6 +14,11 @@ export default function Counter(){
     function decreamentCounterParentFunction(by){
         setCount(count-by)
     }
+
+    function resetCounter(){
+        setCount(0)
+    }
+
     return(
         <div>
             <span className="count">{count}</span>
@@ -26,7 +31,10 @@ export default function Counter(){
 
             <CounterButton by={5} incrementMethod={increamentCounterParentFunction} 
             decreamentMethod={decreamentCounterParentFunction}/>
-        </div>
+
+
+            <button className="resetButton" onClick={resetCounter}>Reset</button>
+            </div>
     )
 }
 
